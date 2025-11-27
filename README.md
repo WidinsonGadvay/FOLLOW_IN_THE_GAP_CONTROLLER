@@ -918,7 +918,7 @@ https://youtu.be/EXUDsh8eUD8
 
 - Imagen de  funcionamiento:
 
-    [![EJECUCION](S "EJECUCION")](https://github.com/WidinsonGadvay/FOLLOW_IN_THE_GAP_CONTROLLER/blob/main/EJECUCI%C3%92N%20DE%20SIMULADOR%20Y%20NODOS.png "EJECUCION")
+    [![EJECUCION](S "EJECUCION ")](https://github.com/WidinsonGadvay/FOLLOW_IN_THE_GAP_CONTROLLER/blob/main/EJECUCI%C3%92N%20DEL%20SIMULADOR%20Y%20NODOS.png "EJECUCION")
 
 
 
