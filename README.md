@@ -491,7 +491,7 @@ LapCounterNode es un nodo reactivo que se encarga de contar las vueltas de un ve
 ------------
 
 
-### 9.Còdigo del nodo completo:
+### 9.Còdigo del nodo LapCounterNode completo:
 
 ```
 #!/usr/bin/env python3
