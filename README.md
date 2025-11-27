@@ -870,14 +870,10 @@ Inicia ROS2, crea el nodo con max_laps=10 y lo ejecuta hasta que termine el nùm
 
 
 
-![](https://img.shields.io/github/stars/pandao/editor.md.svg) ![](https://img.shields.io/github/forks/pandao/editor.md.svg) ![](https://img.shields.io/github/tag/pandao/editor.md.svg) ![](https://img.shields.io/github/release/pandao/editor.md.svg) ![](https://img.shields.io/github/issues/pandao/editor.md.svg) ![](https://img.shields.io/bower/v/editor.md.svg)
-
-
-**Table of Contents**
-
-
-[TOC]
 
 
 
-###End
+
+
+
+
