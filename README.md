@@ -45,21 +45,28 @@ En esta secciòn se detallara el procedimiento para instalar el paquete necesari
 
 	mkdir scr
 
-4.Instalaciòn de las dependencia :Igresar a la carpeta scr
+4.Instalaciòn de las dependencia :Ingresar a la carpeta scr
 
 	cd scr
 5.Ejecutar este comando para instalar todas la sdependencias a usarse:
 
 	ros2 pkg create follow_the_gap_node --build-type ament_python --dependencies rclpy sensor_msgs nav_msgs ackermann_msgs numpy scipy
 
+5.Una vez isntaladas las dependencias , ejecutar los siguientes comandos para construir el paquete
 
- 6.Para simular en  F1TENTH con la pista respectiva se procede a cambiar el nombre del mapa en el archivo sim.yaml:
+	PROYECTO1$ colcon build
+
+Nota:Debe de ingresar a su carpeta del proyecto desde la terminal ,luego ejecutar el comando anterior
+
+6.Ejecutar el siguiente comando:
+
+	source install/setup.bash
+
+ 7.Para simular en  F1TENTH con la pista respectiva se procede a cambiar el nombre del mapa en el archivo sim.yaml:
 
 	    map_path: '/home/widinsong/F1Tenth-Repository/src/f1tenth_gym_ros/maps/SaoPaulo_map'
 
-7.Àdemas , se debe toman en cuenta tener los archivos de la pista en formato png y yaml en la carpeta de maps del simulador F1TENTH 
-
-8.Para ejecutar la simulaciòn se ejecuta primero el simulador f1tenth,segundo el nodo del controlador ,luego el nodo del contador(LapCounterNode)
+8.Àdemas , se debe toman en cuenta tener los archivos de la pista en formato png y yaml en la carpeta de maps del simulador F1TENTH 
 
 ------------
 
@@ -779,7 +786,7 @@ is_at_start = dist < 3.5  # tolerancia de zona de inicio
 ------------
 
 
-### Lògica de ejecuciòn del nodo:
+###11. Lògica de ejecuciòn del nodo:
 
 ------------
 
@@ -868,6 +875,50 @@ def main(args=None):
 Inicia ROS2, crea el nodo con max_laps=10 y lo ejecuta hasta que termine el nùmero de vueltas asignadas. Al final, destruye el nodo y cierra rclpy.
 
 
+------------
+### 12.Comandos para ejecutar los nodos 
+
+- Ir a la carpeta donde tenga  instalado el  repositorio para ejecutar los siguientes comandos:
+Para ejecutar los siguientes comandos debera de estar en la carpeta de su proyecto creado :
+
+	cd F1Tenth-Repository
+
+ejemplo:
+
+	widinsong@widinsongadvay:~$ cd F1Tenth-Repository
+	widinsong@widinsongadvay:~/F1Tenth-Repository$ colcon build
+	widinsong@widinsongadvay:~/F1Tenth-Repository$ source install/setup.bash
+	widinsong@widinsongadvay:~/F1Tenth-Repository$ ros2 launch f1tenth_gym_ros gym_bridge_launch.py
+
+- Dirigirse al directorio de su carpeta del proyecto creado para ejecutar los siguientes comandos:
+
+ejemplo de ejecuciòn:
+
+	widinsong@widinsongadvay:~$ cd Documentos/
+	widinsong@widinsongadvay:~/Documentos$ cd PROYECTO1/
+	widinsong@widinsongadvay:~/Documentos/PROYECTO1$
+	widinsong@widinsongadvay:~/Documentos/PROYECTO1$ colcon build
+        Starting >>> f1tenth_follow_gap
+        Finished <<< f1tenth_follow_gap [1.09s]          
+       Summary: 1 package finished [1.34s]
+	widinsong@widinsongadvay:~/Documentos/PROYECTO1$ source install/setup.bash
+
+-Comando para ejecutar el nodo del controlador:
+
+	widinsong@widinsongadvay:~/Documentos/PROYECTO1$ ros2 run f1tenth_follow_gap FollowTheGapNode
+
+-Comando para ejecutar el nodo del contador y cronometro:
+
+	widinsong@widinsongadvay:~/Documentos/PROYECTO1$ ros2 run f1tenth_follow_gap LapCounterNode 
+
+------------
+
+#### Enlace del funcionamiento del controlador conjunto con sus dos nodos:
+https://youtu.be/EXUDsh8eUD8
+
+- Imagen de  funcionamiento:
+
+    [![EJECUCION](S "EJECUCION")](https://github.com/WidinsonGadvay/FOLLOW_IN_THE_GAP_CONTROLLER/blob/main/EJECUCI%C3%92N%20DE%20SIMULADOR%20Y%20NODOS.png "EJECUCION")
 
 
 
@@ -876,4 +927,4 @@ Inicia ROS2, crea el nodo con max_laps=10 y lo ejecuta hasta que termine el nùm
 
 
 
-
+###End
